@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+#tabItem .tabsBox{display: flex; justify-content: center;}
+#tabItem .tabbox{min-width: 160px; display:inline-block; padding:10px; border-bottom:5px solid #ccc; text-align: center; margin-right: 10px; cursor: pointer;}
+#tabItem .tabbox.selected{border-bottom:5px solid #f50057; cursor: default;}
+.rightBtn {display: flex; justify-content: flex-end;}
+.centerBtn {display: flex; justify-content: space-between;}
