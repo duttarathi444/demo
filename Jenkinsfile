@@ -15,17 +15,8 @@ pipeline{
     }
     stage("BUILD"){
       steps{
-        sh '''
-            # Source NVM if Node was installed via NVM
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            
-            # Fallback: Add standard binary paths to PATH
-            export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
-            
-            npm install
-            npm run build
-        '''
+        sh 'npm install'
+        sh 'npm run build'
       }
       post{
         always{
