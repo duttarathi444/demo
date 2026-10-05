@@ -14,12 +14,11 @@ pipeline{
       }
       post{
         always{
-          zipFile: './dist',
+          zipFile: './public.zip',
           archive: true,
-          dir: './public'
         }
         cleanup{
-          sh 'rm -rf ./dist'
+          sh 'rm -rf ./public.zip',
           sh 'rm -rf ./node_modules'
         }
       }
