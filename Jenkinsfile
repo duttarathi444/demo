@@ -1,7 +1,7 @@
 pipeline{
   agent {label 'node16'}
   tools {
-        nodejs 'Node18'
+        nodejs 'Node16'
   }
   triggers{
     pollSCM('* * * * *')
