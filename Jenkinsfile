@@ -12,7 +12,7 @@ pipeline{
     }
     stage("BUILD"){
       steps{
-        sh 'npm install',
+        sh 'npm install'
         sh 'npm run build'
       }
       post{
@@ -21,7 +21,7 @@ pipeline{
               archive: true,
         }
         cleanup{
-          sh 'rm -rf ./public.zip',
+          sh 'rm -rf ./public.zip'
           sh 'rm -rf ./node_modules'
         }
       }
