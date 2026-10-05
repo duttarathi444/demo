@@ -17,8 +17,8 @@ pipeline{
       }
       post{
         always{
-          zipFile: './public.zip',
-          archive: true,
+          zip zipFile: './public.zip',
+              archive: true,
         }
         cleanup{
           sh 'rm -rf ./public.zip',
