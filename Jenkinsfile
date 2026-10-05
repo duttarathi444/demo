@@ -19,6 +19,7 @@ pipeline{
         always{
           zip zipFile: './public.zip',
               archive: true,
+              dir: './public'
         }
         cleanup{
           sh 'rm -rf ./public.zip'
