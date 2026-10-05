@@ -1,5 +1,8 @@
 pipeline{
   agent {label 'node16'}
+  triggers{
+    pollSCM('* * * * *')
+  }
   stages{
     stage("GIT"){
       steps{
